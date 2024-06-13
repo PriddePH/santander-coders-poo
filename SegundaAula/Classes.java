@@ -12,9 +12,10 @@ public class Classes {
     public static void main(String[] args) {
         
         //Define a classe que esta construindo e cria um novo objeto 
-        Cachorros cachorrosUm = new Cachorros("Quimera", "Preto", 50, 6.7, 5, "nada");
-        Cachorros cachorroDois = new Cachorros("Quimera", "Preto", 50, 6.7, 5, "nada");
-        
+        Cachorros cachorrosUm = new Cachorros("Quimera", "Preto", 35, 3, 5, "nada");
+        Cachorros cachorroDois = new Cachorros("Pitty", "Laranja", 50, 4.2, 5, "nada");
+    
+
         System.out.println(cachorrosUm.toString());
         System.out.println(cachorroDois.toString());
 

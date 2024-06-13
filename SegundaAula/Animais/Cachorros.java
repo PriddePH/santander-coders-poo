@@ -4,6 +4,10 @@ public class Cachorros {
     
     //utiliza-se double quando o valor númerico vai ter casas decimais
     //deixar tudo em public para que as outras classes possam ver
+
+    //uma variavel static que funciona para todos os objetos, indepedente do seus valores
+    static int numeroDeCachorros = 0;
+
     private String nome;
     private String cor;
     private int altura;
@@ -15,6 +19,7 @@ public class Cachorros {
     //Os construtores sempre ficam entrem os atributos da classe (variaveis) e os metodos.
     //Os construtores são quem dita como sera feito a construção de um objeto dessa classe. 
     public Cachorros(){} //construtor padrão que fica com os atributos padrões
+
     public Cachorros(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
         this.nome = nome;
         this.cor = cor;
@@ -22,6 +27,8 @@ public class Cachorros {
         this.peso = peso;
         this.tamanhoDoRabo = tamanhoDoRabo;
         this.estadoDeEspirito = estadoDeEspirito;
+
+        numeroDeCachorros ++;
     }
 
     //Metodo Get: eu estou retornando o tipo da váriavel e para isso eu tenho que usar get + nome da variavel (cammelCase)
@@ -75,6 +82,14 @@ public class Cachorros {
     public String getEstadoDeEspirito() {
         return estadoDeEspirito;
     }
+   
+    public static int getNumeroDeCachorros() {
+        return numeroDeCachorros;
+    }
+
+    public static void setNumeroDeCachorros(int numeroDeCachorros) {
+        Cachorros.numeroDeCachorros = numeroDeCachorros;
+    }
 
     public void comer(){}
 
@@ -109,6 +124,12 @@ public class Cachorros {
 
         return this.estadoDeEspirito;
 
+    }
+
+    //definindo qual o toString dos objetos
+    @Override
+    public String toString() {
+        return "Cachorros [nome=" + nome + "]";
     }
 
 }
